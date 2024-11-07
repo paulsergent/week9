@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String Paul Sergent</title>
+    <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <h1></h1>
+
+    <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+
+
+    
+</body>
+
+<script>
+    const str = 'JavaScript is a versatile programming language.'
+
+    const title = document.querySelector('h1')
+
+    title.textContent = str
+
+    const lists = document.querySelectorAll('ul li')
+
+    lists[0].innerHTML = '<strongLength of string: </strong>' + str.length
+    lists[1].textContent = str.toLowerCase()
+    lists[2].innerHTML = str.slice(16, 25)
+    lists[3].innerHTML = str.replace('JavaScript', 'Python')
+    lists[4].textContent = 'Does the string contain "language": ' + str.includes('language')
+    lists[5].textContent = `programming is at index ${str.indexOf('programming')}`
+    lists[6].innerHTML = str.slice(0, 10)
+    lists[7].innerHTML = 'Does the string end with "language": ' + str.endsWith('language')
+    lists[8].textContent = str.split(' ')
+    lists[9].textContent = str.trim()
+    lists[10].textContent = str.repeat(2)
+    lists[11].innerHTML = str.slice(-8)
+    lists[12].textContent = str.replaceAll('a', '@')
+    
+
+
+
+    
+</script>
+</html>
