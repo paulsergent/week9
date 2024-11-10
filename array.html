@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array paulSergent</title>
+    <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <h1>
+
+    </h1>
+    <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+</body>
+<script>
+    const lists = document.querySelectorAll('ul li')
+    const numbers = [12, 5, 8, 130, 44, 2, 17, 9, 33, 105, 68, 72, 19]
+    // 1. find all numbers greater than 20
+    lists[0].innerHTML = numbers.filter(number => number > 20)
+    // 2.Create a new array where each number is multiplied by 2.
+    lists[1].innerHTML = numbers.map(number => number * 2)
+    // 3. Find the sum of all the numbers in the array.
+    lists[2].innerHTML = numbers.reduce((acc, number) => acc + number, 0)
+    // 4.Arrange the numbers in descending order.
+    lists[3].innerHTML = numbers.sort((a, b) => b - a)
+    //5. Identify the first number in the array that is greater than 50.
+    lists[4].innerHTML = numbers.find(number => number > 50)
+    // 6. Check if the number 33 exists in the array.
+    lists[5].innerHTML = numbers.includes(33)
+    // 7. Create a sub-array containing the first five elements.
+    lists[6].innerHTML = numbers.slice(0, 5)
+    // 8. Remove the second and third elements from the array and replace them with 15 and 25.
+    numbers.splice(1, 2, 15, 25)
+    lists[7].innerHTML = numbers
+    // 9. Reverse the order of elements in the array.
+    lists[8].innerHTML = numbers.reverse()
+    // 10. Check if every number in the array is less than 200.
+    lists[9].innerHTML = numbers.every(number => number < 200)
+    // 11. Increase each number by 1 using the increment operator.
+    lists[10].innerHTML = numbers.map(number => number + 1)
+    // 12. Cut out the first 6 numbers and return the remainder of each when divided by 7
+    lists[11].innerHTML = numbers.slice(0, 6).map(number => number % 7)
+    // 13. Cut out the last 5 numbers and add the text “last “ to each.
+    lists[12].innerHTML = numbers.slice(-5).map(number => 'last ' + number)
+    // 14. Find the first number that is a multiple of 2,3, and 5.
+    lists[13].innerHTML = numbers.find(number => number % 2 === 0 && number % 3 === 0 && number % 5 === 0)
+    // 15. Split the array into two separate arrays: one containing all even numbers and the other containing all odd numbers.
+    const evenNumbers = numbers.filter(number => number % 2 === 0)
+    const oddNumbers = numbers.filter(number => number % 2 !== 0)
+    lists[14].innerHTML = `Even numbers: ${evenNumbers}, Odd numbers: ${oddNumbers}`
+    // 16. Sort the array in descending order based on the remainder when each number is divided by 7.
+    lists[15].innerHTML = numbers.sort((a, b) => b % 7 - a % 7)
+    // 17. Find the index of the minimum element without fully sorting the array.
+    lists[16].innerHTML = numbers.indexOf(Math.min(...numbers))
+    // 18. Using a combination of filter(), map(), and reduce(), calculate the sum of the squares of all numbers greater than 50.
+    lists[17].innerHTML = numbers.filter(number => number > 50).map(number => number ** 2).reduce((acc, number) => acc + number, 0)
+ 
+
+</script>
+</html>
