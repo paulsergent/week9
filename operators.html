@@ -58,8 +58,44 @@
 
     lists[10].textContent = 'Generate a random number:' + Math.random()
     
+    lists[11].textContent = 'Generate a random number from 1 to 30: ' +  Math.floor(Math.random() * 30)
 
+    //const num = prompt('give me a number')
 
+    //if(num > 0 && num <= 100){
+        
+      //  if (num >= 60){
+        //    alert('Excellent Results')
+        //} else if (num >= 50){
+        //    alert('Credit Results')
+        //} else if (num >= 40){
+        //    alert('Pass Results')
+        //} else {
+        //    alert('Try it again')}
+    //}
+    //else{
+    //    alert('Invalid Number')
+    //}
+    //num => 70 ? alert('Excellent Results') : num => 60 ? alert('Credit Results') : num => 50 ? alert('Pass Results') : alert('Try it again')
+// 2 scores: if both scores are greater than 50, person is promoted, if only one score is greater than fifty, person is to retake the exam, if both scores are less than 50, person is to repeat the class
+    const math = prompt('Enter your mathematics score')
+    const eng = prompt('Enter your english score')
+
+   math >= 50 && eng >= 50 ? alert('Promoted') : math >= 50 || eng >= 50 ? alert(`Retake the ${math >= 50 ? 'english': 'mathematics'}`) : alert('Repeat the class')
+
+   //calculate average of the 2 scores, if over 70 is excellent results, over 60 is credit results, over 50 is pass results, else try again 
+    const average = (parseInt(math) + parseInt(eng)) / 2
+    if(average > 70){
+        alert('Excellent Results')
+    } else if (average > 60){
+        alert('Credit Results')
+    } else if (average > 50){
+        alert('Pass Results')
+    } else {
+        alert('Try it again')
+    }
+
+    
 
 
 </script>
