@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object</title>
+</head>
+<body>
+    
+</body>
+<script>
+    const person1 = {}
+    const person2 = object{}
+
+    person1.name = 'Francis'
+    person1.age = 55
+    person1['home address'] = 'umuchu'
+    delete person1['home address']
+
+    person1.homeAddress = 'umuchu'
+    person1['likes'] = ['football', 'history', 'jazz']
+    person1.likes[3] = ['programming']
+    person1.likes[6] = ['cooking']
+
+    // this leaves 2 empty slots in the array
+
+    // using a keyword (reserved words in JS) as a key
+    person1.let = 'let us know what you are doing'
+    person1[100] = 'hundred'
+
+    
+    //function within an object
+    person1.readme = function() {
+        return `hello I am ${this.name}, and I love ${this.likes[Math.floor(Math.random()*this.likes.length)]}`}
+        
+        //create an object of celebrity, that have 6 keys, one must be a boolean, one must be a string, one must be an array. Then use a function to return the keys 
+    
+        
+    const celebrity = {}
+    celebrity.name = 'MF DOOM'
+    celebrity.age = 50
+    celebrity.isAlive = false
+    celebrity.songs = ['One Beer', 'Accordion', 'Rapp Snitch Knishes', 'All Caps', 'Rhymes Like Dimes', 'Figaro', 'Great Day', 'Monster Zero']
+    celebrity.albums = ['Operation: Doomsday', 'Mm.. Food', 'Born Like This', 'Take Me to Your Leader', 'Vaudeville Villain', 'NehruvianDoom']
+    celebrity.Pseudos = ['MF DOOM', 'King Geedorah', 'Viktor Vaughn', 'Metal Fingers', 'Zev Love X', 'Dumile']
+        
+    celebrity.readme = function() {
+        return `Your favourite rapper's favourite rapper is called ${this.name}, he is ${this.age} years old, is he alive? ${this.isAlive}, his best songs are ${this.songs}, his best albums are ${this.albums}, and his pseudonyms are ${this.Pseudos}`
+    }
+</script>
+</html>
